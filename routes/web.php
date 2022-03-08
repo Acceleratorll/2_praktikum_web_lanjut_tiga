@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return '<a href="https://www.educastudio.com/">https://www.educastudio.com/</a>';
 });
 
 Route::prefix('category')->group(function (){
