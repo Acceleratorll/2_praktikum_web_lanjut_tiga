@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\EduGamesController;
+use App\Http\Controllers\KidsGamesController;
+use App\Http\Controllers\StoryBooksController;
+use App\Http\Controllers\KidsSongController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,5 +22,8 @@ Route::get('/', function () {
 });
 
 Route::prefix('category')->group(function (){
-    Route::get('/edugames', [EduGamesController::class]);
+    Route::get('/edugames', [EduGamesController::class, 'index']);
+    Route::get('/kidsgames', [KidsGamesController::class, 'index']);
+    Route::get('/storybooks', [StoryBooksController::class, 'index']);
+    Route::get('/kidssong', [KidsSongController::class, 'index']);
 });
