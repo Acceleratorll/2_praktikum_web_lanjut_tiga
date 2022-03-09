@@ -43,3 +43,4 @@ Route::get('/about', function () {
     https://www.educastudio.com/about-us</a>';
 });
 
+Route::resource('contact', ContactController::class);
