@@ -5,6 +5,7 @@ use App\Http\Controllers\KidsGamesController;
 use App\Http\Controllers\StoryBooksController;
 use App\Http\Controllers\KidsSongController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ProgramController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,3 +31,9 @@ Route::prefix('category')->group(function (){
 });
 
 Route::get('/news/{id?}', [NewsController::class, 'index']);
+
+Route::prefix('programs')->group(function (){
+    Route::get('/karir', [ProgramController::class, 'karir']);
+    Route::get('/magang', [ProgramController::class, 'magang']);
+    Route::get('/kunjungan-industri', [ProgramController::class, 'kunjIndustri']);
+});
