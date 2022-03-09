@@ -37,3 +37,9 @@ Route::prefix('programs')->group(function (){
     Route::get('/magang', [ProgramController::class, 'magang']);
     Route::get('/kunjungan-industri', [ProgramController::class, 'kunjIndustri']);
 });
+
+Route::get('/about', function () {
+    return '<a href="https://www.educastudio.com/about-us">
+    https://www.educastudio.com/about-us</a>';
+});
+
