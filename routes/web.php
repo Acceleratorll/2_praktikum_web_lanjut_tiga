@@ -4,6 +4,7 @@ use App\Http\Controllers\EduGamesController;
 use App\Http\Controllers\KidsGamesController;
 use App\Http\Controllers\StoryBooksController;
 use App\Http\Controllers\KidsSongController;
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +28,5 @@ Route::prefix('category')->group(function (){
     Route::get('/storybooks', [StoryBooksController::class, 'index']);
     Route::get('/kidssong', [KidsSongController::class, 'index']);
 });
+
+Route::get('/news/{id?}', [NewsController::class, 'index']);
